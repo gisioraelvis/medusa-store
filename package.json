@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "cleanup:medusa": "cd medusa && npm run clean",
-    "setup:medusa": "cd medusa && npm install",
-    "setup:storefront": "cd storefront && npm install",
-    "seed": "cd medusa && npm run seed",
-    "dev:medusa": "cd medusa && npm run dev",
-    "dev:storefront": "cd storefront && npm run dev",
-    "dev": "concurrently --kill-others \"npm run dev:medusa\" \"npm run dev:storefront\""
+    "cleanup:medusa": "cd medusa && yarn clean",
+    "setup:medusa": "cd medusa && yarn install",
+    "setup:storefront": "cd storefront && yarn install",
+    "seed": "cd medusa && yarn seed",
+    "dev:medusa": "cd medusa && yarn dev",
+    "dev:storefront": "cd storefront && yarn dev",
+    "dev": "concurrently --kill-others \"yarn dev:medusa\" \"yarn dev:storefront\""
   },
   "author": "",
   "license": "ISC",
