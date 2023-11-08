@@ -52,6 +52,21 @@ const plugins = [
       },
     },
   },
+  // {
+  //   resolve: "@medusajs/payment-m-pesa",
+  //   options: {
+  //     consumerKey: process.env.MPESA_CONSUMER_KEY,
+  //     consumerSecret: process.env.MPESA_CONSUMER_SECRET,
+  //     businessShortCode: process.env.MPESA_BUSINESS_SHORTCODE,
+  //     passkey: process.env.MPESA_PASSKEY,
+  //     partyA: process.env.MPESA_PARTY_A,
+  //     b2cSecurityCredential: process.env.MPESA_B2C_SECURITY_CREDENTIAL,
+  //     initiatorName: process.env.MPESA_INITIATOR_NAME,
+  //     callbackUrl: process.env.MPESA_CALLBACK_URL,
+  //     environment: process.env.MPESA_ENVIRONMENT,
+  //     transactionType: process.env.MPESA_TRANSACTION_TYPE,
+  //   },
+  // },
 ];
 
 const modules = {
@@ -69,6 +84,19 @@ const modules = {
   },
 };
 
+const MPESA_ENVS = {
+  consumerKey: process.env.MPESA_CONSUMER_KEY,
+  consumerSecret: process.env.MPESA_CONSUMER_SECRET,
+  businessShortCode: process.env.MPESA_BUSINESS_SHORTCODE,
+  passkey: process.env.MPESA_PASSKEY,
+  partyA: process.env.MPESA_PARTY_A,
+  b2cSecurityCredential: process.env.MPESA_B2C_SECURITY_CREDENTIAL,
+  initiatorName: process.env.MPESA_INITIATOR_NAME,
+  callbackUrl: process.env.MPESA_CALLBACK_URL,
+  environment: process.env.MPESA_ENVIRONMENT,
+  transactionType: process.env.MPESA_TRANSACTION_TYPE,
+};
+
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
   jwtSecret: process.env.JWT_SECRET,
@@ -77,6 +105,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   redis_url: REDIS_URL,
+  mpesa_envs: MPESA_ENVS,
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */

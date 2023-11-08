@@ -4,6 +4,7 @@ import clsx from "clsx"
 import React from "react"
 import PaymentStripe from "../payment-stripe"
 import PaymentTest from "../payment-test"
+import PaymentMPesa from "../payment-mpesa"
 
 type PaymentContainerProps = {
   paymentSession: PaymentSession
@@ -24,6 +25,10 @@ const PaymentInfoMap: Record<string, { title: string; description: string }> = {
   paypal: {
     title: "PayPal",
     description: "Secure payment with PayPal",
+  },
+  mpesa: {
+    title: "M-Pesa Xpress",
+    description: "Secure payment with M-Pesa Xpress",
   },
   manual: {
     title: "Test payment",
@@ -80,6 +85,12 @@ const PaymentElement = ({
       return (
         <div className="pt-8 pr-7">
           <PaymentStripe />
+        </div>
+      )
+    case "mpesa":
+      return (
+        <div className="pt-8 pr-7">
+          <PaymentMPesa />
         </div>
       )
     case "manual":

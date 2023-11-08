@@ -1,5 +1,12 @@
 import type { SettingConfig } from "@medusajs/admin";
-import type { SettingProps } from "@medusajs/admin";
+
+type SettingProps = {
+  notify: {
+    success: (title: string, message: string) => void;
+    error: (title: string, message: string) => void;
+    info: (title: string, message: string) => void;
+  };
+};
 
 const CustomSettingPage = ({ notify }: SettingProps) => {
   const handleClick = () => {
